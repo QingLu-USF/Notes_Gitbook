@@ -1,0 +1,25 @@
+{
+  "name": "itdsce",
+  "version": "1.0.0",
+  "description": "Information relevant to Introduction to Data Science for Civil Engineering",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QingLu-USF/ITDSCE.git"
+  },
+  "keywords": [
+    "Civil",
+    "Engineering",
+    "Data",
+    "Science"
+  ],
+  "author": "Q. Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QingLu-USF/ITDSCE/issues"
+  },
+  "homepage": "https://github.com/QingLu-USF/ITDSCE#readme"
+}
