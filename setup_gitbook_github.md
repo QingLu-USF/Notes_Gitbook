@@ -7,19 +7,21 @@ The setup of gitbook on github is based on [link](https://medium.com/@richdayand
 > Step 1: create a repository at GitHub  
 > Step 2: clone the GitHub repository to a local directory.  
 > Step 3: install NPM at [link](https://www.npmjs.com/get-npm) (**Note:** see note below on what to install and how to resolve some issues.)     
->
 > Step 4: Install gitbook-cli by running "npm install -g gitbook-cli"   
 >
-> > gitbook init   
-> > npm init  
-> > gitbook install  
-> > gitbook build  
-> > git add .  
-> > git commit -m 'some message'  
-> > git push -u origin main  
-> > git subtree push --prefix=\_book origin gh-pages  
+> gitbook init   
+> npm init  
+> gitbook install  
+> gitbook build  
+> git add .  
+> git commit -m 'some message'  
+> git push -u origin main  
+> git subtree push --prefix=\_book origin gh-pages  
 
-The online book can be viewed at https:\/\/*Github-Usnername*.github.io\/*Repo-Name*
+The online book can be viewed at https:\/\/*Github-Usnername*.github.io\/*Repo-Name*  
+
+For example, The online book for this repo can be viewed at [link](https://qinglu-usf.github.io/ITDSCE/) 
+
 
 If the files in the local directory are updated, run the following to update the contents on GitHub (and therefore the webpage):  
 > gitbook build  
