@@ -1,4 +1,4 @@
-# Notes-based-on-gitbook
+# Notes Based on Gitbook
 
 The setup of gitbook on github is based on [link](https://medium.com/@richdayandnight/simple-tutorial-on-hosting-your-gitbook-documentation-on-github-pages-bonus-with-gitbook-editor-f27f60d5d408)  
 **Note 1:** need to change all "master" on  this webpage to "main" due to BLM  
