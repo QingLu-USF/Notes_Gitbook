@@ -2,6 +2,8 @@
 
 ## Writing R Packages in RStudio  
 
+Note:  the following notes are based on the content at [link](https://ourcodingclub.github.io/tutorials/writing-r-package/).
+
 **Step 1:** Install two packages for package development tools (*devtools*) and writing documentation (*roxygen2*). 
 
 > install.packages("devtools")  
