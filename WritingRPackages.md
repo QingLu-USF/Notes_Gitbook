@@ -2,6 +2,53 @@
 
 ## Writing R Packages in RStudio  
 
+**Step 1:**  Create a new package in RStudio by clicking " **File -> New Project -> New Directory -> R Package** ", check "Create a git repository". The "Open in a new session" may also be checked.  
+
+Create some R script files in the folder "R". In the Console, run:  
+> library(roxygen2)  
+> roxygenise()  
+> 
+
+**Step 2:**  Stage and commit  
+* Click the “Git” tab in upper right pane
+* Check “Staged” box for all files you want to commit.
+    - Default: stage everything
+    - When to do otherwise: this will all go to GitHub. So consider if that is appropriate for each file. You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in .gitignore.
+* If you’re not already in the Git pop-up, click “Commit”
+* Type a message in “Commit message”.
+* Click “Commit”  
+
+**Step 3:**  Make and connect a GitHub repo  
+
+*Make a new repo on GitHub*  
+1. Go to https://github.com and make sure you are logged in.  
+2. Click the green “New repository” button. Or, if you are on your own profile page, click on “Repositories”, then click the green “New” button.  
+3. Pick a repository name – it should probably match the name of your local Project and directory.    
+   * Public or private, as appropriate  
+   * DO NOT initialize this repository with a README.  
+4. Click the big green button “Create repository.”  
+5. Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.   
+
+*Connect local repo to GitHub repo*  
+Click on the “two purple boxes and a white square” in the Git pane. Click “Add remote”. Paste the URL here and pick a remote name, almost certainly origin. Now “Add”.  
+
+We should be back in the “New Branch” dialog (if not, click on the “two purple boxes and a white square” in the Git pane again). I assume you’re on the master branch want it to track master on GitHub. Enter master as the branch name and make sure “Sync branch with remote” is checked. Click “Create” (yes, even though the branch already exists). In the next dialog, choose “overwrite”.  
+
+
+# To install a package from Github: #  
+Run the following codes:  
+> install.packages("devtools")  
+> library(devtools)  
+> install_github("username/packagename")  
+> e.g.,  install_github("QingLu-USF/FirstTry")  
+> 
+
+
+
+
+# below procedures were followed previously but seemed to be unnecessary.
+
+
 Note:  the following notes are based on the content at [link](https://ourcodingclub.github.io/tutorials/writing-r-package/).
 
 **Step 1:** Install two packages for package development tools (*devtools*) and writing documentation (*roxygen2*). 
