@@ -4,7 +4,16 @@
 
 **Step 1:**  Create a new package in RStudio by clicking " **File -> New Project -> New Directory -> R Package** ", check "Create a git repository". The "Open in a new session" may also be checked.  
 
-Create some R script files in the folder "R". In the Console, run:  
+Create some R script files in the folder "R". The format of the comment for functions defined in the files should follow the examples later on this page.  
+To create data set files:
+  1. First create a folder "Data" in the package directory;   
+  2. Save data variable into the "Data" folder with the following R code:  
+  > save(DataSetName,file="filename.RData")  
+  > 
+Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName, not "filename".
+
+
+In the Console, run:  
 > library(roxygen2)  
 > roxygenise()  
 > 
@@ -33,7 +42,6 @@ Create some R script files in the folder "R". In the Console, run:
 Click on the “two purple boxes and a white square” in the Git pane. Click “Add remote”. Paste the URL here and pick a remote name, almost certainly origin. Now “Add”.  
 
 We should be back in the “New Branch” dialog (if not, click on the “two purple boxes and a white square” in the Git pane again). I assume you’re on the master branch want it to track master on GitHub. Enter master as the branch name and make sure “Sync branch with remote” is checked. Click “Create” (yes, even though the branch already exists). In the next dialog, choose “overwrite”.  
-
 
 # To install a package from Github: #  
 Run the following codes:  
