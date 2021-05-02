@@ -12,7 +12,7 @@ In the R project folder, create a folder named "R". **In this "R" folder**, you 
 
 > #' Stress Unit Conversion from psi to MPa  
 > #'   
-> #' Convert stress in PSI to stress in MPa  
+> #' Convert stress in psi to stress in MPa  
 > #' @param PSI The stress in psi  
 > #' @return The stress in MPa  
 > #' @examples   
