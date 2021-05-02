@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Useful Resources · GitBook</title>
+        <title>Writing R Packages · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="WritingRPackages.html" />
     
-    
-    <link rel="prev" href="setup_gitbook_github.html" />
+    <link rel="prev" href="Useful_Resources.html" />
     
 
     </head>
@@ -115,7 +113,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="Useful_Resources.html">
+        <li class="chapter " data-level="1.3" data-path="Useful_Resources.html">
             
                 <a href="Useful_Resources.html">
             
@@ -128,7 +126,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="WritingRPackages.html">
+        <li class="chapter active" data-level="1.4" data-path="WritingRPackages.html">
             
                 <a href="WritingRPackages.html">
             
@@ -171,7 +169,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Useful Resources</a>
+        <a href="." >Writing R Packages</a>
     </h1>
 </div>
 
@@ -186,10 +184,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="here-are-some-useful-resources">Here are some useful resources.</h1>
-<ol>
-<li>online course Data Science for Ecologists and Environmental Scientists! <a href="https://ourcodingclub.github.io/" target="_blank">link</a></li>
-</ol>
+                                <h1 id="writing-r-packages">Writing R Packages</h1>
+<h2 id="writing-r-packages-in-rstudio">Writing R Packages in RStudio</h2>
+<p>Note:  the following notes are based on the content at <a href="https://ourcodingclub.github.io/tutorials/writing-r-package/" target="_blank">link</a>.</p>
+<p><strong>Step 1:</strong> Install two packages for package development tools (<em>devtools</em>) and writing documentation (<em>roxygen2</em>). </p>
+<blockquote>
+<p>install.packages(&quot;devtools&quot;)<br>install.packages(&quot;roxygen2&quot;)  </p>
+</blockquote>
+<p><strong>Step 2:</strong> Create an R Project in a directory on your computer<br>In the R project folder, create a folder named &quot;R&quot;. <strong>In this &quot;R&quot; folder</strong>, you may create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.</p>
+<blockquote>
+<h1 id="stress-unit-conversion-from-psi-to-mpa">&apos; Stress Unit Conversion from psi to MPa</h1>
+<h1 id="">&apos;</h1>
+<h1 id="convert-stress-in-psi-to-stress-in-mpa">&apos; Convert stress in psi to stress in MPa</h1>
+<h1 id="param-psi-the-stress-in-psi">&apos; @param PSI The stress in psi</h1>
+<h1 id="return-the-stress-in-mpa">&apos; @return The stress in MPa</h1>
+<h1 id="examples">&apos; @examples</h1>
+<h1 id="stress1---psitompa100">&apos; stress1 &lt;- PSI_to_MPa(100);</h1>
+<h1 id="stress2---psitompac4060800">&apos; stress2 &lt;- PSI_to_MPa(c(40,60,800));</h1>
+<h1 id="export">&apos; @export</h1>
+<p>PSI_to_MPa &lt;- function(PSI){<br>  MPa &lt;- PSI*0.00689476;<br>  return(MPa);<br>}</p>
+<h1 id="stress-unit-conversion-from-mpa-to-psi">&apos; Stress Unit Conversion from MPa to psi</h1>
+<h1 id="">&apos;</h1>
+<h1 id="convert-stress-in-mpa-to-stress-in-psi">&apos; Convert stress in MPa to stress in psi</h1>
+<h1 id="param-mpa-the-stress-in-mpa">&apos; @param MPa The stress in MPa</h1>
+<h1 id="return-the-stress-in-psi">&apos; @return The stress in psi</h1>
+<h1 id="examples">&apos; @examples</h1>
+<h1 id="stress1---mpatopsi07">&apos; stress1 &lt;- MPa_to_PSI(0.7);</h1>
+<h1 id="stress2---mpatopsic04-06-08">&apos; stress2 &lt;- MPa_to_PSI(c(0.4, 0.6, 0.8));</h1>
+<h1 id="export">&apos; @export</h1>
+<p>MPa_to_PSI &lt;- function(MPa){<br>  PSI &lt;- MPa*145.038;<br>  return(PSI);<br>}</p>
+</blockquote>
+<p><strong>Step 3:</strong> Create a DESCRIPTION file in the R project directory (<strong>Note:</strong> not the &quot;R&quot; folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.<br>For example, something like the following:  </p>
+<blockquote>
+<p>Package: FirstTry<br>Type: Package<br>Title: Some function definitions and data sets for Demonstration<br>Version: 0.0.1.0<br>Encoding: UTF-8  </p>
+</blockquote>
+<p><strong>Step 4:</strong> Run the following codes in the Console while the working directory is where the R project is.</p>
+<blockquote>
+<p>library(roxygen2); # Read in the roxygen2 R package<br>roxygenise();      # Builds the help files  </p>
+</blockquote>
 
                                 
                                 </section>
@@ -217,14 +249,10 @@
 
             
                 
-                <a href="setup_gitbook_github.html" class="navigation navigation-prev " aria-label="Previous page: Tips on Setting Up GitHub for Gitbook">
+                <a href="Useful_Resources.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Useful Resources">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="WritingRPackages.html" class="navigation navigation-next " aria-label="Next page: Writing R Packages">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -233,7 +261,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Useful Resources","level":"1.3","depth":1,"next":{"title":"Writing R Packages","level":"1.4","depth":1,"path":"WritingRPackages.md","ref":"WritingRPackages.md","articles":[]},"previous":{"title":"Tips on Setting Up GitHub for Gitbook","level":"1.2","depth":1,"path":"setup_gitbook_github.md","ref":"setup_gitbook_github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Useful_Resources.md","mtime":"2021-05-02T17:07:35.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T17:18:38.679Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-02T17:07:35.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T17:18:38.679Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
