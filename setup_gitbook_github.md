@@ -6,6 +6,10 @@ The setup of gitbook on github is based on [link](https://medium.com/@richdayand
 
 > Step 1: create a repository at GitHub  
 > Step 2: clone the GitHub repository to a local directory.  
+>   run some code in the Shell:
+>   git clone https://github.com/QingLu-USF/myrepo.git
+>   cd myrepo
+
 > Step 3: install NPM at [link](https://www.npmjs.com/get-npm) (**Note:** see note below on what to install and how to resolve some issues.)     
 > Step 4: Install gitbook-cli by running "npm install -g gitbook-cli"   
 >
@@ -15,6 +19,7 @@ The setup of gitbook on github is based on [link](https://medium.com/@richdayand
 > gitbook build  
 > git add .  
 > git commit -m 'some message'  
+> git pull
 > git push -u origin main  
 > git subtree push --prefix=\_book origin gh-pages  
 
@@ -27,6 +32,7 @@ If the files in the local directory are updated, run the following to update the
 > gitbook build  
 > git add .   
 > git commit -m 'some message'  
+> git pull
 > git push -u origin main  
 > git subtree push --prefix=\_book origin gh-pages  
 
