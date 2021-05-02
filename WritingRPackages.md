@@ -46,6 +46,8 @@ For example, something like the following:
 > Type: Package  
 > Title: Some function definitions and data sets for Demonstration  
 > Version: 0.0.1.0  
+> Encoding: UTF-8  
+> 
 
 **Step 4:** Run the following codes in the Console while the working directory is where the R project is.
 
