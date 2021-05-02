@@ -186,6 +186,44 @@
                                 
                                 <h1 id="writing-r-packages">Writing R Packages</h1>
 <h2 id="writing-r-packages-in-rstudio">Writing R Packages in RStudio</h2>
+<p><strong>Step 1:</strong>  Create a new package in RStudio by clicking &quot; <strong>File -&gt; New Project -&gt; New Directory -&gt; R Package</strong> &quot;, check &quot;Create a git repository&quot;. The &quot;Open in a new session&quot; may also be checked.  </p>
+<p>Create some R script files in the folder &quot;R&quot;. In the Console, run:  </p>
+<blockquote>
+<p>library(roxygen2)<br>roxygenise()  </p>
+</blockquote>
+<p><strong>Step 2:</strong>  Stage and commit  </p>
+<ul>
+<li>Click the &#x201C;Git&#x201D; tab in upper right pane</li>
+<li>Check &#x201C;Staged&#x201D; box for all files you want to commit.<ul>
+<li>Default: stage everything</li>
+<li>When to do otherwise: this will all go to GitHub. So consider if that is appropriate for each file. You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in .gitignore.</li>
+</ul>
+</li>
+<li>If you&#x2019;re not already in the Git pop-up, click &#x201C;Commit&#x201D;</li>
+<li>Type a message in &#x201C;Commit message&#x201D;.</li>
+<li>Click &#x201C;Commit&#x201D;  </li>
+</ul>
+<p><strong>Step 3:</strong>  Make and connect a GitHub repo  </p>
+<p><em>Make a new repo on GitHub</em>  </p>
+<ol>
+<li>Go to <a href="https://github.com" target="_blank">https://github.com</a> and make sure you are logged in.  </li>
+<li>Click the green &#x201C;New repository&#x201D; button. Or, if you are on your own profile page, click on &#x201C;Repositories&#x201D;, then click the green &#x201C;New&#x201D; button.  </li>
+<li>Pick a repository name &#x2013; it should probably match the name of your local Project and directory.    <ul>
+<li>Public or private, as appropriate  </li>
+<li>DO NOT initialize this repository with a README.  </li>
+</ul>
+</li>
+<li>Click the big green button &#x201C;Create repository.&#x201D;  </li>
+<li>Copy the HTTPS clone URL to your clipboard via the green &#x201C;Clone or Download&#x201D; button.   </li>
+</ol>
+<p><em>Connect local repo to GitHub repo</em><br>Click on the &#x201C;two purple boxes and a white square&#x201D; in the Git pane. Click &#x201C;Add remote&#x201D;. Paste the URL here and pick a remote name, almost certainly origin. Now &#x201C;Add&#x201D;.  </p>
+<p>We should be back in the &#x201C;New Branch&#x201D; dialog (if not, click on the &#x201C;two purple boxes and a white square&#x201D; in the Git pane again). I assume you&#x2019;re on the master branch want it to track master on GitHub. Enter master as the branch name and make sure &#x201C;Sync branch with remote&#x201D; is checked. Click &#x201C;Create&#x201D; (yes, even though the branch already exists). In the next dialog, choose &#x201C;overwrite&#x201D;.  </p>
+<h1 id="to-install-a-package-from-github">To install a package from Github:</h1>
+<p>Run the following codes:  </p>
+<blockquote>
+<p>install.packages(&quot;devtools&quot;)<br>library(devtools)<br>install_github(&quot;username/packagename&quot;)<br>e.g.,  install_github(&quot;QingLu-USF/FirstTry&quot;)  </p>
+</blockquote>
+<h1 id="below-procedures-were-followed-previously-but-seemed-to-be-unnecessary">below procedures were followed previously but seemed to be unnecessary.</h1>
 <p>Note:  the following notes are based on the content at <a href="https://ourcodingclub.github.io/tutorials/writing-r-package/" target="_blank">link</a>.</p>
 <p><strong>Step 1:</strong> Install two packages for package development tools (<em>devtools</em>) and writing documentation (<em>roxygen2</em>). </p>
 <blockquote>
@@ -261,7 +299,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-02T17:07:35.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T17:20:46.349Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-02T18:59:49.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T18:59:59.586Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
