@@ -8,7 +8,7 @@
 > install.packages("roxygen2")  
 
 **Step 2:** Create an R Project in a directory on your computer  
-In the R project folder, create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.
+In the R project folder, create a folder named "R". **In this "R" folder**, you may create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.
 
 > #' Stress Unit Conversion from psi to MPa  
 > #'   
@@ -39,7 +39,7 @@ In the R project folder, create some .R script files that contain the functions 
 > }
 > 
 
-**Step 3:** Create a DESCRIPTION file in the R project directory, which is a plain text file without extension.  This file will hold some of the meta-data on the R package.  
+**Step 3:** Create a DESCRIPTION file in the R project directory (**Note:** not the "R" folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.  
 For example, something like the following:  
 
 > Package: FirstTry  
