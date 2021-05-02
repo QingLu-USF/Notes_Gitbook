@@ -10,7 +10,9 @@ To create data set files:
   2. Save data variable into the "Data" folder with the following R code:  
   > save(DataSetName,file="filename.RData")  
   > 
-Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName, not "filename".
+
+Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName, not "filename".  
+See more details on including data sets in the R package at https://r-pkgs.org/data.html   
 
 
 In the Console, run:  
