@@ -1,6 +1,6 @@
 # Introduction  
 
-The repo is dedicated to information relevant to the Introduction to Data Science for Civil Engineering topic.  
+The repo is dedicated to information relevant to the Introduction to Data Science for Civil Engineering.  
 
 # Some Notes  
-So far, this file is empty.  
+So far, this repo is under construction. New contents will be added periodically.  
