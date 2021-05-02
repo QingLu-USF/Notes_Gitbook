@@ -25,7 +25,7 @@ The setup of gitbook on github is based on [link](https://medium.com/@richdayand
 
 The online book can be viewed at https:\/\/*Github-Usnername*.github.io\/*Repo-Name*  
 
-For example, The online book for this repo can be viewed at [link](https://qinglu-usf.github.io/ITDSCE/) 
+For example, The online book for this repo can be viewed at [link](https://qinglu-usf.github.io/Notes_Gitbook/) 
 
 
 If the files in the local directory are updated, run the following to update the contents on GitHub (and therefore the webpage):  
