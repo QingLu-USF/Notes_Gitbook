@@ -39,7 +39,15 @@ In the R project folder, create some .R script files that contain the functions 
 > }
 > 
 
-**Step 3:** Run the following codes in the Console while the working directory is where the R project is.
+**Step 3:** Create a DESCRIPTION file in the R project directory, which is a plain text file without extension.  This file will hold some of the meta-data on the R package.  
+For example, something like the following:  
+
+> Package: FirstTry  
+> Type: Package  
+> Title: Some function definitions and data sets for Demonstration  
+> Version: 0.0.1.0  
+
+**Step 4:** Run the following codes in the Console while the working directory is where the R project is.
 
 > library(roxygen2); # Read in the roxygen2 R package  
 > roxygenise();      # Builds the help files  
