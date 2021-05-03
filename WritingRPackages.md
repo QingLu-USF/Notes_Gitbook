@@ -76,6 +76,11 @@ Run the following codes:
 > remove.packages("packagename")
 > detach("package:packagename", unload = TRUE)  
 >
+
+The R session may be re-started by running:  
+> .rs.restartR()  
+> 
+
 2. repeat the above codes:  
 > install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
 > library(packagename)  
