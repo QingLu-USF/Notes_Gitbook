@@ -7,21 +7,26 @@ The setup of gitbook on github is based on [link](https://medium.com/@richdayand
 > Step 1: create a repository at GitHub  
 > Step 2: clone the GitHub repository to a local directory.  
 >   run some code in the Shell:  
->   git clone https://github.com/QingLu-USF/myrepo.git  
->   cd myrepo  
+```bash
+git clone https://github.com/QingLu-USF/myrepo.git  
+cd myrepo  
+```
 
 > Step 3: install NPM at [link](https://www.npmjs.com/get-npm) (**Note:** see note below on what to install and how to resolve some issues.)     
 > Step 4: Install gitbook-cli by running "npm install -g gitbook-cli"   
 >
-> git pull  
-> gitbook init   
-> npm init  
-> gitbook install  
-> gitbook build  
-> git add .  
-> git commit -m 'some message'  
-> git push -u origin main  
-> git subtree push --prefix=\_book origin gh-pages  
+
+```bash
+git pull  
+gitbook init   
+npm init  
+gitbook install  
+gitbook build  
+git add .  
+git commit -m 'some message'  
+git push -u origin main  
+git subtree push --prefix=\_book origin gh-pages  
+```
 
 The online book can be viewed at https:\/\/*Github-Usnername*.github.io\/*Repo-Name*  
 
@@ -29,17 +34,21 @@ For example, The online book for this repo can be viewed at [link](https://qingl
 
 
 If the files in the local directory are updated, run the following to update the contents on GitHub (and therefore the webpage):  
-> git pull  
-> gitbook build  
-> git add .   
-> git commit -m 'some message'  
-> git push -u origin main  
-> git subtree push --prefix=\_book origin gh-pages  
+```bash
+git pull  
+gitbook build  
+git add .   
+git commit -m 'some message'  
+git push -u origin main  
+git subtree push --prefix=\_book origin gh-pages  
+```
 
 ## **Note on installing NPM**  
 After I installed gitbook-cli using "npm install -g gitbook-cli" and ran "gitbook help", I got an error message. I did the following  
 > In the shell, go to "C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules" and run  
-> $ npm install graceful-fs@latest --save
+```bash
+$ npm install graceful-fs@latest --save
+```
 
 based on the information at this [link](https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful)  
 and it works. But then when I ran *"gitbook init"*, I got another error message:  
@@ -58,7 +67,10 @@ However, next when I run "gitbook serve" I got another error message:
 
 I did the following:  
 > In the shell, go to "C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules" and run 
-> $ npm install graceful-fs@4.2.0 --save
+
+```bash
+$ npm install graceful-fs@4.2.0 --save
+```
 
 and the "gitbook serve" worked.
 
