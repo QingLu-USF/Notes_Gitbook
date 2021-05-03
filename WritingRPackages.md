@@ -37,9 +37,10 @@ See more details on dataset documentation at https://r-pkgs.org/data.html and ht
 <br/><br/>
 
 After the data files and R script files are created, to create the R package, in the Console, run:  
-> library(roxygen2)  
-> roxygenise()  
-> 
+```r
+library(roxygen2)  
+ roxygenise()  
+``` 
 
 **Step 2:**  Stage and commit  
 * Click the “Git” tab in upper right pane
@@ -68,26 +69,32 @@ We should be back in the “New Branch” dialog (if not, click on the “two pu
 
 # To install a package from Github: #  
 Run the following codes:  
-> install.packages("devtools")  
-> library(devtools)  
-> install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
-> library(packagename)  
-> 
+```r
+install.packages("devtools")  
+library(devtools)  
+install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
+library(packagename)  
+```
 
 # To install an updated package from Github: #
 1. First uninstall and detach the installed package by running:  
-> remove.packages("packagename")  
-> detach("package:packagename", unload = TRUE)    
->
+```r
+remove.packages("packagename")  
+detach("package:packagename", unload = TRUE)    
+```
 
   - The R session may be re-started by running:  
-    > .rs.restartR()  
-    > 
+    ```r
+    .rs.restartR()  
+    ``` 
 
 2. repeat the above codes:  
-> install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
-> library(packagename)  
-> 
+```r
+install_github("username/packagename")  
+# For example,  
+install_github("QingLu-USF/FirstTry")   
+library(packagename)  
+``` 
 
 
 # Useful links that were referred to:  
@@ -103,8 +110,10 @@ Note:  the following notes are based on the content at [link](https://ourcodingc
 
 **Step 1:** Install two packages for package development tools (*devtools*) and writing documentation (*roxygen2*). 
 
-> install.packages("devtools")  
-> install.packages("roxygen2")  
+```r
+install.packages("devtools")  
+install.packages("roxygen2")  
+```
 
 **Step 2:** Create an R Project in a directory on your computer  
 In the R project folder, create a folder named "R". **In this "R" folder**, you may create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.
@@ -142,15 +151,17 @@ In the R project folder, create a folder named "R". **In this "R" folder**, you 
 **Step 3:** Create a DESCRIPTION file in the R project directory (**Note:** not the "R" folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.  
 For example, something like the following:  
 
-> Package: FirstTry  
-> Type: Package  
-> Title: Some function definitions and data sets for Demonstration  
-> Version: 0.0.1.0  
-> Encoding: UTF-8  
-> 
+```
+Package: FirstTry  
+Type: Package  
+Title: Some function definitions and data sets for Demonstration  
+Version: 0.0.1.0  
+Encoding: UTF-8  
+``` 
 
 **Step 4:** Run the following codes in the Console while the working directory is where the R project is.
 
-> library(roxygen2); # Read in the roxygen2 R package  
-> roxygenise();      # Builds the help files  
-> 
+```r
+library(roxygen2); # Read in the roxygen2 R package  
+roxygenise();      # Builds the help files  
+``` 
