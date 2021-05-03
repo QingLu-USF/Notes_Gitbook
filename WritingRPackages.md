@@ -39,7 +39,7 @@ See more details on dataset documentation at https://r-pkgs.org/data.html and ht
 After the data files and R script files are created, to create the R package, in the Console, run:  
 ```r
 library(roxygen2)  
- roxygenise()  
+roxygenise()  
 ``` 
 
 **Step 2:**  Stage and commit  
