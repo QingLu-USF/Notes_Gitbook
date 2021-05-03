@@ -122,19 +122,19 @@ In the R project folder, create a folder named "R". **In this "R" folder**, you 
 
 
 `  
-#' Stress Unit Conversion from MPa to psi  
-#'   
-#' Convert stress in MPa to stress in psi  
-#' @param MPa The stress in MPa  
-#' @return The stress in psi  
-#' @examples   
-#' stress1 <- MPa_to_PSI(0.7);  
-#' stress2 <- MPa_to_PSI(c(0.4, 0.6, 0.8));  
-#' @export  
-MPa_to_PSI <- function(MPa){  
-  PSI <- MPa*145.038;  
-  return(PSI);  
-}
+  #' Stress Unit Conversion from MPa to psi  
+  #'   
+  #' Convert stress in MPa to stress in psi  
+  #' @param MPa The stress in MPa  
+  #' @return The stress in psi  
+  #' @examples   
+  #' stress1 <- MPa_to_PSI(0.7);  
+  #' stress2 <- MPa_to_PSI(c(0.4, 0.6, 0.8));  
+  #' @export  
+      MPa_to_PSI <- function(MPa){  
+        PSI <- MPa*145.038;  
+        return(PSI);  
+        }
 
 `  
 
