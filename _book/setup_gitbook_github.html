@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Useful_Resources.html" />
+    <link rel="next" href="WritingRPackages.html" />
     
     
     <link rel="prev" href="./" />
@@ -115,12 +115,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="Useful_Resources.html">
+        <li class="chapter " data-level="1.3" data-path="WritingRPackages.html">
             
-                <a href="Useful_Resources.html">
+                <a href="WritingRPackages.html">
             
                     
-                    Useful Resources
+                    Writing R Packages
             
                 </a>
             
@@ -128,12 +128,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="WritingRPackages.html">
+        <li class="chapter " data-level="1.4" data-path="Useful_Resources.html">
             
-                <a href="WritingRPackages.html">
+                <a href="Useful_Resources.html">
             
                     
-                    Writing R Packages
+                    Useful Resources
             
                 </a>
             
@@ -189,20 +189,38 @@
                                 <h1 id="notes-based-on-gitbook">Notes Based on Gitbook</h1>
 <p>The setup of gitbook on github is based on <a href="https://medium.com/@richdayandnight/simple-tutorial-on-hosting-your-gitbook-documentation-on-github-pages-bonus-with-gitbook-editor-f27f60d5d408" target="_blank">link</a><br><strong>Note 1:</strong> need to change all &quot;master&quot; on  this webpage to &quot;main&quot; due to BLM<br><strong>Note 2:</strong> I stopped at Step 9 on this webpage. Instead, I did the following:</p>
 <blockquote>
-<p>Step 1: create a repository at GitHub<br>Step 2: clone the GitHub repository to a local directory.<br>  run some code in the Shell:<br>  git clone <a href="https://github.com/QingLu-USF/myrepo.git" target="_blank">https://github.com/QingLu-USF/myrepo.git</a><br>  cd myrepo  </p>
+<p>Step 1: create a repository at GitHub<br>Step 2: clone the GitHub repository to a local directory.<br>  run some code in the Shell:  </p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/QingLu-USF/myrepo.git  
+<span class="hljs-built_in">cd</span> myrepo
+</code></pre>
 <p>Step 3: install NPM at <a href="https://www.npmjs.com/get-npm" target="_blank">link</a> (<strong>Note:</strong> see note below on what to install and how to resolve some issues.)<br>Step 4: Install gitbook-cli by running &quot;npm install -g gitbook-cli&quot;   </p>
-<p>git pull<br>gitbook init<br>npm init<br>gitbook install<br>gitbook build<br>git add .<br>git commit -m &apos;some message&apos;<br>git push -u origin main<br>git subtree push --prefix=_book origin gh-pages  </p>
 </blockquote>
+<pre><code class="lang-bash">git pull  
+gitbook init   
+npm init  
+gitbook install  
+gitbook build  
+git add .  
+git commit -m <span class="hljs-string">&apos;some message&apos;</span>  
+git push -u origin main  
+git subtree push --prefix=\_book origin gh-pages
+</code></pre>
 <p>The online book can be viewed at https:\/\/<em>Github-Usnername</em>.github.io\/<em>Repo-Name</em>  </p>
 <p>For example, The online book for this repo can be viewed at <a href="https://qinglu-usf.github.io/Notes_Gitbook/" target="_blank">link</a> </p>
 <p>If the files in the local directory are updated, run the following to update the contents on GitHub (and therefore the webpage):  </p>
-<blockquote>
-<p>git pull<br>gitbook build<br>git add .<br>git commit -m &apos;some message&apos;<br>git push -u origin main<br>git subtree push --prefix=_book origin gh-pages  </p>
-</blockquote>
+<pre><code class="lang-bash">git pull  
+gitbook build  
+git add .   
+git commit -m <span class="hljs-string">&apos;some message&apos;</span>  
+git push -u origin main  
+git subtree push --prefix=\_book origin gh-pages
+</code></pre>
 <h2 id="note-on-installing-npm"><strong>Note on installing NPM</strong></h2>
 <p>After I installed gitbook-cli using &quot;npm install -g gitbook-cli&quot; and ran &quot;gitbook help&quot;, I got an error message. I did the following  </p>
 <blockquote>
-<p>In the shell, go to &quot;C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules&quot; and run<br>$ npm install graceful-fs@latest --save</p>
+<p>In the shell, go to &quot;C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules&quot; and run  </p>
+<pre><code class="lang-bash">$ npm install graceful-fs@latest --save
+</code></pre>
 </blockquote>
 <p>based on the information at this <a href="https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful" target="_blank">link</a><br>and it works. But then when I ran <em>&quot;gitbook init&quot;</em>, I got another error message:  </p>
 <blockquote>
@@ -218,9 +236,10 @@
 </blockquote>
 <p>I did the following:  </p>
 <blockquote>
-<p>In the shell, go to &quot;C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules&quot; and run 
-$ npm install graceful-fs@4.2.0 --save</p>
+<p>In the shell, go to &quot;C:\Users\qlu\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules&quot; and run </p>
 </blockquote>
+<pre><code class="lang-bash">$ npm install graceful-fs@4.2.0 --save
+</code></pre>
 <p>and the &quot;gitbook serve&quot; worked.</p>
 
                                 
@@ -254,7 +273,7 @@ $ npm install graceful-fs@4.2.0 --save</p>
                 </a>
                 
                 
-                <a href="Useful_Resources.html" class="navigation navigation-next " aria-label="Next page: Useful Resources">
+                <a href="WritingRPackages.html" class="navigation navigation-next " aria-label="Next page: Writing R Packages">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -265,7 +284,7 @@ $ npm install graceful-fs@4.2.0 --save</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tips on Setting Up GitHub for Gitbook","level":"1.2","depth":1,"next":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"setup_gitbook_github.md","mtime":"2021-05-02T17:20:38.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:37:34.164Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tips on Setting Up GitHub for Gitbook","level":"1.2","depth":1,"next":{"title":"Writing R Packages","level":"1.3","depth":1,"path":"WritingRPackages.md","ref":"WritingRPackages.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"setup_gitbook_github.md","mtime":"2021-05-03T13:51:59.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:52:07.377Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

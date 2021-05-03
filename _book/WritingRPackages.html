@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Useful_Resources.html" />
     
-    <link rel="prev" href="Useful_Resources.html" />
+    
+    <link rel="prev" href="setup_gitbook_github.html" />
     
 
     </head>
@@ -113,12 +115,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="Useful_Resources.html">
+        <li class="chapter active" data-level="1.3" data-path="WritingRPackages.html">
             
-                <a href="Useful_Resources.html">
+                <a href="WritingRPackages.html">
             
                     
-                    Useful Resources
+                    Writing R Packages
             
                 </a>
             
@@ -126,12 +128,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="WritingRPackages.html">
+        <li class="chapter " data-level="1.4" data-path="Useful_Resources.html">
             
-                <a href="WritingRPackages.html">
+                <a href="Useful_Resources.html">
             
                     
-                    Writing R Packages
+                    Useful Resources
             
                 </a>
             
@@ -192,16 +194,16 @@
 <p><strong>Approach 1:</strong>  </p>
 <ol>
 <li>First create a folder &quot;Data&quot; in the package directory;   </li>
-<li>Save data variable into the &quot;Data&quot; folder with the following R code:  <blockquote>
-<p>save(DataSetName,file=&quot;DataSetName.RData&quot;)  </p>
-</blockquote>
+<li>Save data variable into the &quot;Data&quot; folder with the following R code:  <pre><code class="lang-r">save(DataSetName,file=<span class="hljs-string">&quot;DataSetName.RData&quot;</span>)
+</code></pre>
 </li>
 </ol>
 <p>Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName. One file contains a single object with the same name as the file.  </p>
 <p><strong>Approach 2:</strong><br>In the R project directory, run the following codes:</p>
-<blockquote>
-<p>install.packages(&quot;devtools&quot;)<br>library(devtools)<br>use_data(DataSetName)</p>
-</blockquote>
+<pre><code class="lang-r">install.packages(<span class="hljs-string">&quot;devtools&quot;</span>)  
+<span class="hljs-keyword">library</span>(devtools)  
+use_data(DataSetName)
+</code></pre>
 <p>See more details on including data sets in the R package at <a href="https://r-pkgs.org/data.html" target="_blank">https://r-pkgs.org/data.html</a>   </p>
 <h3 id="to-create-documentation-for-a-data-set-file">To create documentation for a data set file:</h3>
 <ol>
@@ -210,9 +212,9 @@
 </ol>
 <p>See more details on dataset documentation at <a href="https://r-pkgs.org/data.html" target="_blank">https://r-pkgs.org/data.html</a> and <a href="https://cran.r-project.org/doc/manuals/R-exts.html#Documenting-data-sets" target="_blank">https://cran.r-project.org/doc/manuals/R-exts.html#Documenting-data-sets</a><br><br><br></p>
 <p>After the data files and R script files are created, to create the R package, in the Console, run:  </p>
-<blockquote>
-<p>library(roxygen2)<br>roxygenise()  </p>
-</blockquote>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(roxygen2)  
+roxygenise()
+</code></pre>
 <p><strong>Step 2:</strong>  Stage and commit  </p>
 <ul>
 <li>Click the &#x201C;Git&#x201D; tab in upper right pane</li>
@@ -242,26 +244,29 @@
 <p>We should be back in the &#x201C;New Branch&#x201D; dialog (if not, click on the &#x201C;two purple boxes and a white square&#x201D; in the Git pane again). I assume you&#x2019;re on the master branch want it to track master on GitHub. Enter master as the branch name and make sure &#x201C;Sync branch with remote&#x201D; is checked. Click &#x201C;Create&#x201D; (yes, even though the branch already exists). In the next dialog, choose &#x201C;overwrite&#x201D;.  </p>
 <h1 id="to-install-a-package-from-github">To install a package from Github:</h1>
 <p>Run the following codes:  </p>
-<blockquote>
-<p>install.packages(&quot;devtools&quot;)<br>library(devtools)<br>install_github(&quot;username/packagename&quot;)  [e.g.,  install_github(&quot;QingLu-USF/FirstTry&quot;)]<br>library(packagename)  </p>
-</blockquote>
+<pre><code class="lang-r">install.packages(<span class="hljs-string">&quot;devtools&quot;</span>)  
+<span class="hljs-keyword">library</span>(devtools)  
+install_github(<span class="hljs-string">&quot;username/packagename&quot;</span>)  [e.g.,  install_github(<span class="hljs-string">&quot;QingLu-USF/FirstTry&quot;</span>)]   
+<span class="hljs-keyword">library</span>(packagename)
+</code></pre>
 <h1 id="to-install-an-updated-package-from-github">To install an updated package from Github:</h1>
 <ol>
 <li><p>First uninstall and detach the installed package by running:  </p>
-<blockquote>
-<p>remove.packages(&quot;packagename&quot;)<br>detach(&quot;package:packagename&quot;, unload = TRUE)    </p>
-</blockquote>
+<pre><code class="lang-r">remove.packages(<span class="hljs-string">&quot;packagename&quot;</span>)  
+<span class="hljs-keyword">detach</span>(<span class="hljs-string">&quot;package:packagename&quot;</span>, unload = <span class="hljs-literal">TRUE</span>)
+</code></pre>
 <ul>
-<li>The R session may be re-started by running:  <blockquote>
-<p>.rs.restartR()  </p>
-</blockquote>
+<li>The R session may be re-started by running:  <pre><code class="lang-r">.rs.restartR()
+</code></pre>
 </li>
 </ul>
 </li>
 <li><p>repeat the above codes:  </p>
-<blockquote>
-<p>install_github(&quot;username/packagename&quot;)  [e.g.,  install_github(&quot;QingLu-USF/FirstTry&quot;)]<br>library(packagename)  </p>
-</blockquote>
+<pre><code class="lang-r">install_github(<span class="hljs-string">&quot;username/packagename&quot;</span>)  
+<span class="hljs-comment"># For example,  </span>
+install_github(<span class="hljs-string">&quot;QingLu-USF/FirstTry&quot;</span>)   
+<span class="hljs-keyword">library</span>(packagename)
+</code></pre>
 </li>
 </ol>
 <h1 id="useful-links-that-were-referred-to">Useful links that were referred to:</h1>
@@ -274,9 +279,9 @@
 <h1 id="below-procedures-were-followed-previously-but-seemed-to-be-unnecessary-however-the-format-of-the-comments-for-the-r-script-file-is-useful">Below procedures were followed previously but seemed to be unnecessary. However, the format of the comments for the R script file is useful.</h1>
 <p>Note:  the following notes are based on the content at <a href="https://ourcodingclub.github.io/tutorials/writing-r-package/" target="_blank">link</a>.</p>
 <p><strong>Step 1:</strong> Install two packages for package development tools (<em>devtools</em>) and writing documentation (<em>roxygen2</em>). </p>
-<blockquote>
-<p>install.packages(&quot;devtools&quot;)<br>install.packages(&quot;roxygen2&quot;)  </p>
-</blockquote>
+<pre><code class="lang-r">install.packages(<span class="hljs-string">&quot;devtools&quot;</span>)  
+install.packages(<span class="hljs-string">&quot;roxygen2&quot;</span>)
+</code></pre>
 <p><strong>Step 2:</strong> Create an R Project in a directory on your computer<br>In the R project folder, create a folder named &quot;R&quot;. <strong>In this &quot;R&quot; folder</strong>, you may create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.</p>
 <pre><code>  #&apos; Stress Unit Conversion from psi to MPa  
   #&apos;   
@@ -306,13 +311,15 @@
         return(PSI);  
         }
 </code></pre><p><strong>Step 3:</strong> Create a DESCRIPTION file in the R project directory (<strong>Note:</strong> not the &quot;R&quot; folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.<br>For example, something like the following:  </p>
-<blockquote>
-<p>Package: FirstTry<br>Type: Package<br>Title: Some function definitions and data sets for Demonstration<br>Version: 0.0.1.0<br>Encoding: UTF-8  </p>
-</blockquote>
-<p><strong>Step 4:</strong> Run the following codes in the Console while the working directory is where the R project is.</p>
-<blockquote>
-<p>library(roxygen2); # Read in the roxygen2 R package<br>roxygenise();      # Builds the help files  </p>
-</blockquote>
+<pre><code>Package: FirstTry  
+Type: Package  
+Title: Some function definitions and data sets for Demonstration  
+Version: 0.0.1.0  
+Encoding: UTF-8
+</code></pre><p><strong>Step 4:</strong> Run the following codes in the Console while the working directory is where the R project is.</p>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(roxygen2); <span class="hljs-comment"># Read in the roxygen2 R package  </span>
+roxygenise();      <span class="hljs-comment"># Builds the help files</span>
+</code></pre>
 
                                 
                                 </section>
@@ -340,10 +347,14 @@
 
             
                 
-                <a href="Useful_Resources.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Useful Resources">
+                <a href="setup_gitbook_github.html" class="navigation navigation-prev " aria-label="Previous page: Tips on Setting Up GitHub for Gitbook">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Useful_Resources.html" class="navigation navigation-next " aria-label="Next page: Useful Resources">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -352,7 +363,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T13:37:29.529Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:37:34.164Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.3","depth":1,"next":{"title":"Useful Resources","level":"1.4","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"previous":{"title":"Tips on Setting Up GitHub for Gitbook","level":"1.2","depth":1,"path":"setup_gitbook_github.md","ref":"setup_gitbook_github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T13:51:59.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:52:07.377Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
