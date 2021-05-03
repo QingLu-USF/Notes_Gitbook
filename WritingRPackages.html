@@ -188,7 +188,7 @@
 <h2 id="writing-r-packages-in-rstudio">Writing R Packages in RStudio</h2>
 <p><strong>Step 1:</strong>  Create a new package in RStudio by clicking &quot; <strong>File -&gt; New Project -&gt; New Directory -&gt; R Package</strong> &quot;, check &quot;Create a git repository&quot;. The &quot;Open in a new session&quot; may also be checked.  </p>
 <p>Create some R script files in the folder &quot;R&quot;. The format of the comment for functions defined in the files should follow the examples later on this page.  </p>
-<p>To create data set files:  </p>
+<h3 id="to-create-data-set-files">To create data set files:</h3>
 <p><strong>Approach 1:</strong>  </p>
 <ol>
 <li>First create a folder &quot;Data&quot; in the package directory;   </li>
@@ -203,6 +203,11 @@
 <p>install.packages(&quot;devtools&quot;)<br>library(devtools)<br>use_data(DataSetName)</p>
 </blockquote>
 <p>See more details on including data sets in the R package at <a href="https://r-pkgs.org/data.html" target="_blank">https://r-pkgs.org/data.html</a>   </p>
+<h3 id="to-create-documentation-for-a-data-set-file">To create documentation for a data set file:</h3>
+<ol>
+<li>In RStudio, select &quot;<strong>File -&gt; New File -&gt; R Documentation...</strong>&quot;  </li>
+<li>In the popup windown, enter the data set file name in the &quot;Topic name&quot; textbox, and select &quot;Dataset&quot; as Rd template.  </li>
+</ol>
 <p>After the data files and R script files are created, to create the R package, in the Console, run:  </p>
 <blockquote>
 <p>library(roxygen2)<br>roxygenise()  </p>
@@ -239,6 +244,17 @@
 <blockquote>
 <p>install.packages(&quot;devtools&quot;)<br>library(devtools)<br>install_github(&quot;username/packagename&quot;)  [e.g.,  install_github(&quot;QingLu-USF/FirstTry&quot;)]<br>library(packagename)  </p>
 </blockquote>
+<h1 id="to-install-an-updated-package-from-github">To install an updated package from Github:</h1>
+<ol>
+<li>First detach the installed package by running:  <blockquote>
+<p>detach(&quot;package:packagename&quot;, unload = TRUE)  </p>
+</blockquote>
+</li>
+<li>repeat the above codes:  <blockquote>
+<p>install_github(&quot;username/packagename&quot;)  [e.g.,  install_github(&quot;QingLu-USF/FirstTry&quot;)]<br>library(packagename)  </p>
+</blockquote>
+</li>
+</ol>
 <h1 id="useful-links-that-were-referred-to">Useful links that were referred to:</h1>
 <ol>
 <li><a href="https://happygitwithr.com/existing-github-last.html" target="_blank">https://happygitwithr.com/existing-github-last.html</a>  </li>
@@ -322,7 +338,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T01:27:20.025Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T01:27:24.014Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T03:05:33.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T03:05:48.303Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
