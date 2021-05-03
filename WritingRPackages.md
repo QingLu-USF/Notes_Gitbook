@@ -72,7 +72,8 @@ Run the following codes:
 ```r
 install.packages("devtools")  
 library(devtools)  
-install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
+install_github("username/packagename")
+# e.g.,  install_github("QingLu-USF/FirstTry")   
 library(packagename)  
 ```
 
