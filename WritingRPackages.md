@@ -7,7 +7,7 @@
 Create some R script files in the folder "R". The format of the comment for functions defined in the files should follow the examples later on this page.  
 
 
-To create data set files:  
+### To create data set files:  
 
 **Approach 1:**  
   1. First create a folder "Data" in the package directory;   
@@ -24,6 +24,11 @@ In the R project directory, run the following codes:
 > use_data(DataSetName)
 
 See more details on including data sets in the R package at https://r-pkgs.org/data.html   
+
+### To create documentation for a data set file:  
+
+1. In RStudio, select "**File -> New File -> R Documentation...**"  
+2. In the popup windown, enter the data set file name in the "Topic name" textbox, and select "Dataset" as Rd template.  
 
 
 After the data files and R script files are created, to create the R package, in the Console, run:  
@@ -60,6 +65,15 @@ We should be back in the “New Branch” dialog (if not, click on the “two pu
 Run the following codes:  
 > install.packages("devtools")  
 > library(devtools)  
+> install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
+> library(packagename)  
+> 
+
+# To install an updated package from Github: #
+1. First detach the installed package by running:  
+> detach("package:packagename", unload = TRUE)  
+>
+2. repeat the above codes:  
 > install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
 > library(packagename)  
 > 
