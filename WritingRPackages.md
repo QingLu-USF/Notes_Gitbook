@@ -31,7 +31,8 @@ See more details on including data sets in the R package at https://r-pkgs.org/d
 2. In the popup windown, enter the data set file name in the "Topic name" textbox, and select "Dataset" as Rd template.  
 
 See more details on dataset documentation at https://r-pkgs.org/data.html and https://cran.r-project.org/doc/manuals/R-exts.html#Documenting-data-sets  
-<br/>
+<br/><br/>
+
 After the data files and R script files are created, to create the R package, in the Console, run:  
 > library(roxygen2)  
 > roxygenise()  
