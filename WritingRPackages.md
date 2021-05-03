@@ -60,10 +60,9 @@ We should be back in the “New Branch” dialog (if not, click on the “two pu
 Run the following codes:  
 > install.packages("devtools")  
 > library(devtools)  
-> install_github("username/packagename")  
-> e.g.,  install_github("QingLu-USF/FirstTry")  
+> install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
+> library(packagename)  
 > 
-
 
 
 # Useful links that were referred to:  
