@@ -12,16 +12,19 @@ Create some R script files in the folder "R". The format of the comment for func
 **Approach 1:**  
   1. First create a folder "Data" in the package directory;   
   2. Save data variable into the "Data" folder with the following R code:  
-  > save(DataSetName,file="DataSetName.RData")  
-  > 
+  ```r
+  save(DataSetName,file="DataSetName.RData")  
+  ``` 
 
 Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName. One file contains a single object with the same name as the file.  
 
 **Approach 2:**  
 In the R project directory, run the following codes:
-> install.packages("devtools")  
-> library(devtools)  
-> use_data(DataSetName)
+```r
+install.packages("devtools")  
+library(devtools)  
+use_data(DataSetName)
+```
 
 See more details on including data sets in the R package at https://r-pkgs.org/data.html   
 
