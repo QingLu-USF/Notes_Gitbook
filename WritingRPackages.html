@@ -278,25 +278,34 @@
 <p>install.packages(&quot;devtools&quot;)<br>install.packages(&quot;roxygen2&quot;)  </p>
 </blockquote>
 <p><strong>Step 2:</strong> Create an R Project in a directory on your computer<br>In the R project folder, create a folder named &quot;R&quot;. <strong>In this &quot;R&quot; folder</strong>, you may create some .R script files that contain the functions you want to have in your package, along with comments that will be used to create the help files. Below is one example of a customized .R script file that contains two function definitions.</p>
-<blockquote>
-<p>#&apos; Stress Unit Conversion from psi to MPa<br>#&apos;<br>#&apos; Convert stress in psi to stress in MPa<br>#&apos; @param PSI The stress in psi<br>#&apos; @return The stress in MPa<br>#&apos; @examples<br>#&apos; stress1 &lt;- PSI_to_MPa(100);<br>#&apos; stress2 &lt;- PSI_to_MPa(c(40,60,800));<br>#&apos; @export<br>PSI_to_MPa &lt;- function(PSI){<br>  MPa &lt;- PSI*0.00689476;<br>  return(MPa);<br>}</p>
-</blockquote>
-<p>`  </p>
-<h1 id="stress-unit-conversion-from-mpa-to-psi">&apos; Stress Unit Conversion from MPa to psi</h1>
-<h1 id="">&apos;</h1>
-<h1 id="convert-stress-in-mpa-to-stress-in-psi">&apos; Convert stress in MPa to stress in psi</h1>
-<h1 id="param-mpa-the-stress-in-mpa">&apos; @param MPa The stress in MPa</h1>
-<h1 id="return-the-stress-in-psi">&apos; @return The stress in psi</h1>
-<h1 id="examples">&apos; @examples</h1>
-<h1 id="stress1---mpatopsi07">&apos; stress1 &lt;- MPa_to_PSI(0.7);</h1>
-<h1 id="stress2---mpatopsic04-06-08">&apos; stress2 &lt;- MPa_to_PSI(c(0.4, 0.6, 0.8));</h1>
-<h1 id="export">&apos; @export</h1>
-<pre><code>  MPa_to_PSI &lt;- function(MPa){  
-    PSI &lt;- MPa*145.038;  
-    return(PSI);  
-    }
-</code></pre><p>`  </p>
-<p><strong>Step 3:</strong> Create a DESCRIPTION file in the R project directory (<strong>Note:</strong> not the &quot;R&quot; folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.<br>For example, something like the following:  </p>
+<pre><code>  #&apos; Stress Unit Conversion from psi to MPa  
+  #&apos;   
+  #&apos; Convert stress in psi to stress in MPa  
+  #&apos; @param PSI The stress in psi  
+  #&apos; @return The stress in MPa  
+  #&apos; @examples   
+  #&apos; stress1 &lt;- PSI_to_MPa(100);  
+  #&apos; stress2 &lt;- PSI_to_MPa(c(40,60,800));  
+  #&apos; @export  
+      PSI_to_MPa &lt;- function(PSI){  
+        MPa &lt;- PSI*0.00689476;  
+        return(MPa);  
+        }  
+
+  #&apos; Stress Unit Conversion from MPa to psi  
+  #&apos;   
+  #&apos; Convert stress in MPa to stress in psi  
+  #&apos; @param MPa The stress in MPa  
+  #&apos; @return The stress in psi  
+  #&apos; @examples   
+  #&apos; stress1 &lt;- MPa_to_PSI(0.7);  
+  #&apos; stress2 &lt;- MPa_to_PSI(c(0.4, 0.6, 0.8));  
+  #&apos; @export  
+      MPa_to_PSI &lt;- function(MPa){  
+        PSI &lt;- MPa*145.038;  
+        return(PSI);  
+        }
+</code></pre><p><strong>Step 3:</strong> Create a DESCRIPTION file in the R project directory (<strong>Note:</strong> not the &quot;R&quot; folder), which is a plain text file without extension.  This file will hold some of the meta-data on the R package.<br>For example, something like the following:  </p>
 <blockquote>
 <p>Package: FirstTry<br>Type: Package<br>Title: Some function definitions and data sets for Demonstration<br>Version: 0.0.1.0<br>Encoding: UTF-8  </p>
 </blockquote>
@@ -343,7 +352,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T13:29:49.675Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:29:55.224Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Writing R Packages","level":"1.4","depth":1,"previous":{"title":"Useful Resources","level":"1.3","depth":1,"path":"Useful_Resources.md","ref":"Useful_Resources.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"WritingRPackages.md","mtime":"2021-05-03T13:37:29.529Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-03T13:37:34.164Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
