@@ -77,9 +77,9 @@ Run the following codes:
 > detach("package:packagename", unload = TRUE)  
 >
 
-The R session may be re-started by running:  
-> .rs.restartR()  
-> 
+  - The R session may be re-started by running:  
+    > .rs.restartR()  
+    > 
 
 2. repeat the above codes:  
 > install_github("username/packagename")  [e.g.,  install_github("QingLu-USF/FirstTry")]   
