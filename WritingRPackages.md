@@ -5,17 +5,28 @@
 **Step 1:**  Create a new package in RStudio by clicking " **File -> New Project -> New Directory -> R Package** ", check "Create a git repository". The "Open in a new session" may also be checked.  
 
 Create some R script files in the folder "R". The format of the comment for functions defined in the files should follow the examples later on this page.  
-To create data set files:
+
+
+To create data set files:  
+
+**Approach 1:**  
   1. First create a folder "Data" in the package directory;   
   2. Save data variable into the "Data" folder with the following R code:  
-  > save(DataSetName,file="filename.RData")  
+  > save(DataSetName,file="DataSetName.RData")  
   > 
 
-Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName, not "filename".  
+Note: after the package is loaded by library(package name), the data set can be accessed via the name DataSetName. One file contains a single object with the same name as the file.  
+
+**Approach 2:**  
+In the R project directory, run the following codes:
+> install.packages("devtools")  
+> library(devtools)  
+> use_data(DataSetName)
+
 See more details on including data sets in the R package at https://r-pkgs.org/data.html   
 
 
-In the Console, run:  
+After the data files and R script files are created, to create the R package, in the Console, run:  
 > library(roxygen2)  
 > roxygenise()  
 > 
