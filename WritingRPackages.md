@@ -73,8 +73,8 @@ Run the following codes:
 
 # To install an updated package from Github: #
 1. First uninstall and detach the installed package by running:  
-> remove.packages("packagename")
-> detach("package:packagename", unload = TRUE)  
+> remove.packages("packagename")  
+> detach("package:packagename", unload = TRUE)    
 >
 
   - The R session may be re-started by running:  
