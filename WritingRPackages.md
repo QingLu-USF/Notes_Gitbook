@@ -72,7 +72,8 @@ Run the following codes:
 > 
 
 # To install an updated package from Github: #
-1. First detach the installed package by running:  
+1. First uninstall and detach the installed package by running:  
+> remove.packages("packagename")
 > detach("package:packagename", unload = TRUE)  
 >
 2. repeat the above codes:  
