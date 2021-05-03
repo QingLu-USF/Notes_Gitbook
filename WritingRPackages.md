@@ -29,7 +29,6 @@ use_data(DataSetName)
 See more details on including data sets in the R package at https://r-pkgs.org/data.html   
 
 ### To create documentation for a data set file:  
-
 1. In RStudio, select "**File -> New File -> R Documentation...**"  
 2. In the popup windown, enter the data set file name in the "Topic name" textbox, and select "Dataset" as Rd template.  
 
@@ -97,15 +96,13 @@ install_github("QingLu-USF/FirstTry")
 library(packagename)  
 ``` 
 
-
-# Useful links that were referred to:  
+## Useful links that were referred to:  
 1. https://happygitwithr.com/existing-github-last.html  
 2. https://kbroman.org/pkg_primer/pages/github.html  
 3. https://r-pkgs.org/index.html  
 4. https://ourcodingclub.github.io/tutorials/writing-r-package/  
 
-# Below procedures were followed previously but seemed to be unnecessary. However, the format of the comments for the R script file is useful.  
-
+***Below procedures were followed previously but seemed to be unnecessary. However, the format of the comments for the R script file is useful.***   
 
 Note:  the following notes are based on the content at [link](https://ourcodingclub.github.io/tutorials/writing-r-package/).
 
