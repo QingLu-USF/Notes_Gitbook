@@ -5,4 +5,9 @@
 
 
 ## Markdown  
-1. Basic and extended syntax of Markdown [markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
+1. Basic and extended syntax of Markdown [markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)  
+
+
+## RMarkdown  
+1. The reference book [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)  
+2. 
