@@ -1,3 +1,8 @@
 # Here are some useful resources.
 
-1. online course Data Science for Ecologists and Environmental Scientists! [link](https://ourcodingclub.github.io/)
+## Online Courses on Data Science  
+1. Online course [Data Science for Ecologists and Environmental Scientists!](https://ourcodingclub.github.io/)  
+
+
+## Markdown  
+1. Basic and extended syntax of Markdown [markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
